@@ -79,6 +79,8 @@ switch (hand1) {
         }
         break;
 }
+return "I love programming";
+
 }
 
 
