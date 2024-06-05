@@ -13,11 +13,97 @@ const rl = readline.createInterface({
 
 // the function that will be called by the unit test below
 const rockPaperScissors = (hand1, hand2) => {
-
   // Write code here
   // Use the unit test to see what is expected
+hand1 = hand1.toLowerCase()
+hand2 = hand2.toLowerCase()
 
+const validChoices = ["rock", "paper", "scissors"];
+
+if (!validChoices.includes(hand1)) {
+  console.log("Invalid choice from Hand 1.");
+  return;
 }
+
+if (!validChoices.includes(hand2)) {
+  console.log("Invalid choice from Hand 2.");
+  return;
+}
+
+switch (hand1) {
+  case "rock":
+    switch (hand2) {
+      case "rock":
+        console.log("It's a tie!");
+        break;
+        case "paper":
+          console.log("Hand 2 Wins!");
+          break;
+          case "scissors":
+            console.log("Hand 1 Wins!")
+            break;
+            default:
+              console.log("Invalid choice from Hand 2.")
+    }
+    break;
+
+    case "paper":
+      switch (hand2) {
+        case "paper":
+          console.log("It's a tie!");
+          break;
+          case "scissors":
+            console.log("Hand 2 Wins!");
+            break;
+            case "rock":
+              console.log("Hand 1 Wins");
+              break;
+              default:
+                console.log("Invalid choice from Hand 2.")
+      }
+      break;
+
+      case "scissors":
+        switch (hand2) {
+          case "scissors":
+            console.log("It's a tie!")
+            break;
+            case "rock":
+              console.log("Hand 2 Wins!")
+              break;
+              case "paper":
+                console.log("Hand 1 Wins!")
+                break;
+                default:
+                  console.log("Invalid choice from Hand 2.")
+        }
+        break;
+}
+}
+
+
+//   if (hand1 === "rock" && hand2 === "paper") {
+//     console.log("Hand 2 Wins!")
+//   } else if (hand1 === "rock" && hand2 === "scissors") {
+//     console.log("Hand 1 wins!")
+//   } else {
+//     console.log("Tie Game.")
+//   }
+//   if (hand1 === "paper" && hand2 === "scissors") {
+//     console.log("Hand 2 Wins!")
+//   } else if (hand1 === "paper" && hand2 === "rock") {
+//     console.log("Hand 1 wins!")
+//   } else {
+//     console.log("Tie Game.")
+//   }
+//   if (hand1 === "scissors" && hand2 === "rock") {
+//     console.log("Hand 2 Wins!")
+//   } else if (hand1 === "scissors" && hand2 === "paper") {
+//     console.log("Hand 1 wins!")
+//   } else {
+//     console.log("Tie Game.")
+//   }
+// }
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
