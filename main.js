@@ -15,18 +15,18 @@ const rl = readline.createInterface({
 const rockPaperScissors = (hand1, hand2) => {
   // Write code here
   // Use the unit test to see what is expected
-hand1 = hand1.toLowerCase()
-hand2 = hand2.toLowerCase()
+hand1 = hand1.trim().toLowerCase()
+hand2 = hand2.trim().toLowerCase()
 
 const validChoices = ["rock", "paper", "scissors"];
 
 if (!validChoices.includes(hand1)) {
-  console.log("Invalid choice from Hand 1.");
+  console.log("Invalid choice from Hand onw.");
   return;
 }
 
 if (!validChoices.includes(hand2)) {
-  console.log("Invalid choice from Hand 2.");
+  console.log("Invalid choice from Hand two.");
   return;
 }
 
@@ -34,78 +34,35 @@ switch (hand1) {
   case "rock":
     switch (hand2) {
       case "rock":
-        console.log("It's a tie!");
-        break;
+        return "It's a tie!";
         case "paper":
-          console.log("Hand 2 Wins!");
-          break;
+          return "Hand two wins!";
           case "scissors":
-            console.log("Hand 1 Wins!")
-            break;
-            default:
-              console.log("Invalid choice from Hand 2.")
+            return "Hand one wins!";
     }
-    break;
-
+      break;
     case "paper":
       switch (hand2) {
         case "paper":
-          console.log("It's a tie!");
-          break;
+          return "It's a tie!"; 
           case "scissors":
-            console.log("Hand 2 Wins!");
-            break;
+            return "Hand two wins!";
             case "rock":
-              console.log("Hand 1 Wins");
-              break;
-              default:
-                console.log("Invalid choice from Hand 2.")
+              return "Hand one wins";
       }
-      break;
-
+        break;
       case "scissors":
         switch (hand2) {
           case "scissors":
-            console.log("It's a tie!")
-            break;
+            return "It's a tie!";
             case "rock":
-              console.log("Hand 2 Wins!")
-              break;
+              return "Hand two wins!";
               case "paper":
-                console.log("Hand 1 Wins!")
-                break;
-                default:
-                  console.log("Invalid choice from Hand 2.")
+                return "Hand one wins!";
         }
         break;
 }
-return "I love programming";
-
 }
-
-
-//   if (hand1 === "rock" && hand2 === "paper") {
-//     console.log("Hand 2 Wins!")
-//   } else if (hand1 === "rock" && hand2 === "scissors") {
-//     console.log("Hand 1 wins!")
-//   } else {
-//     console.log("Tie Game.")
-//   }
-//   if (hand1 === "paper" && hand2 === "scissors") {
-//     console.log("Hand 2 Wins!")
-//   } else if (hand1 === "paper" && hand2 === "rock") {
-//     console.log("Hand 1 wins!")
-//   } else {
-//     console.log("Tie Game.")
-//   }
-//   if (hand1 === "scissors" && hand2 === "rock") {
-//     console.log("Hand 2 Wins!")
-//   } else if (hand1 === "scissors" && hand2 === "paper") {
-//     console.log("Hand 1 wins!")
-//   } else {
-//     console.log("Tie Game.")
-//   }
-// }
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
